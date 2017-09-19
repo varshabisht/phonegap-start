@@ -27,6 +27,8 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+document.getElementById('btnsubmit').addEventListener('click',this.onCalculate, false);
+
     },
     // deviceready Event Handler
     //
@@ -45,5 +47,16 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    }
+    },
+onCalculate: function()
+{
+var b=document.getElementById('num').value;
+if(b=="9874")
+{
+document.getElementById('res').innerHTML="Yes your answer is correct";
+}
+else
+{
+document.getElementById('res').innerHTML="Incorrect answer";
+}
 };
